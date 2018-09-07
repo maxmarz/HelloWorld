@@ -2,15 +2,13 @@
 
 namespace HelloWorld\Providers;
 
-use Plenty\Plugin\ServiceProvider;
+use Plenty\Plugin\RouteServiceProvider;
+use Plenty\Plugin\Routing\Router;
 
-class HelloWorldServiceProvider extends ServiceProvider
+class HelloWorldRouteServiceProvider extends RouteServiceProvider
 {
-    /**
-     * Register the service provider.
-     */
-    public function register()
+    public function map(Router $router)
     {
-        $router->get('hello','HelloWorld\Controllers\ContentController@sayHello');
+        $this->getApplication()->register(HelloWorldRouteServiceProvider::class);
     }
 }
