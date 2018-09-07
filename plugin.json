@@ -1,5 +1,5 @@
 {
-    "name"              :"TestPlugin",
+    "name"              :"HelloWorld",
     "description"       :"TestPlugin",
     "namespace"         :"HelloWorld",
     "author"            :"Maximilian",
