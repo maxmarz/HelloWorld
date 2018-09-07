@@ -11,6 +11,6 @@ class HelloWorldServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $router->get('hello','HelloWorld\Controllers\ContentController@sayHello');
+        $this->getApplication()->register(HelloWorldRouteServiceProvider::class);
     }
 }
